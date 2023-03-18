@@ -10,4 +10,4 @@ gtag('consent', 'default', {
   'analytics_storage': 'denied'
 });
 
-gtag('config', 'G-YOUR_ID');
+gtag('config', 'G-YOUR_ID'); // Do not remember to replace G-YOUR_ID with your actual GA id.
