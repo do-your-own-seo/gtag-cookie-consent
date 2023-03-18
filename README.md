@@ -1,16 +1,18 @@
 # gtag-cookie-consent.js
-A tiny script in plain JavaScript that prompts the user for permission to set the cookies from Google Analytics.
+A tiny script in plain JavaScript that prompts the user for permission to set analytical cookies from GA4.
+The approach is GDPR compliant because no cookies are set by default.
 
 The script was created for a [multilingual site](https://do-your-own-seo.com/en/), and in order not to complicate things with language settings, I abandoned the idea of creating a modal dynamically.
 Thus, the hidden modal is embedded in the HTML and contains two buttons only:
 
     <div id="modal" class="hidden" data-role="cookieconsent">
-      <b>Here are some cookies</b>
+      <h2>Here are some cookies</h2>
       <p>This site uses two types of cookies: analytical and those needed for this dialog to work.</p>
-      <p><button id="accept-necessary">Reject Analytics</button>
-      <button id="accept-all" autofocus>Accept All</button></p>
+      <p>
+          <button id="accept-necessary">Reject Analytics</button>
+          <button id="accept-all" autofocus>Accept All</button>
+      </p>
     </div>
-      
  ## Usage
     <head>
       ...
