@@ -2,22 +2,12 @@
 A tiny script in plain JavaScript that prompts the user for permission to set analytical cookies from GA4.
 The approach is GDPR compliant because no cookies are set by default.
 
-The script was created for a [multilingual site](https://do-your-own-seo.com/en/), and in order not to complicate things with language settings, I abandoned the idea of creating a modal dynamically.
-Thus, the hidden modal is embedded in the HTML and contains two buttons only:
-
-    <div id="modal" class="hidden" data-role="cookieconsent">
-      <h2>Here are some cookies</h2>
-      <p>This site uses two types of cookies: analytical and those needed for this dialog to work.</p>
-      <p>
-          <button id="accept-necessary">Reject Analytics</button>
-          <button id="accept-all" autofocus>Accept All</button>
-      </p>
-    </div>
- ## Usage
+## Usage
     <head>
-      ...
       <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_ID"></script>
       <script defer src="/path/to/gtag-init.js"></script>
+      // The standard init script for gtag.js was modified according to https://developers.google.com/tag-platform/devguides/consent
+      ...
       <style>
         #modal {
           position: fixed;
@@ -37,4 +27,13 @@ Thus, the hidden modal is embedded in the HTML and contains two buttons only:
       <script src="/path/to/gtag-cookieconsent.js"></script>
     </body>
     
-  The standard init script for gtag.js was modified according to [this guide](https://developers.google.com/tag-platform/devguides/consent)
+ The gtag-cookieconsent.js script was created for a [multilingual site](https://do-your-own-seo.com/en/), and in order not to complicate things with language settings, I abandoned the idea of creating a modal dynamically. Thus, the hidden modal is embedded in the HTML and contains two buttons only:
+
+    <div id="modal" class="hidden" data-role="cookieconsent">
+      <h2>Here are some cookies</h2>
+      <p>This site uses two types of cookies: analytical and those needed for this dialog to work.</p>
+      <p>
+          <button id="accept-necessary">Reject Analytics</button>
+          <button id="accept-all" autofocus>Accept All</button>
+      </p>
+    </div>
