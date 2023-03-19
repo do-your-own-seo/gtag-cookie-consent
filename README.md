@@ -41,8 +41,8 @@ The gtag-cookieconsent script was needed for a [multilingual site](https://do-yo
       <h2>Here are some cookies</h2>
       <p>This site uses two types of cookies: analytical and those needed for this dialog to work.</p>
       <p>
-          <button id="accept-necessary">Reject Analytics</button>
-          <button id="accept-all" autofocus>Accept All</button>
+         <button id="accept-necessary">Reject Analytics</button>
+         <button id="accept-all" autofocus>Accept All</button>
       </p>
     </div>
     
