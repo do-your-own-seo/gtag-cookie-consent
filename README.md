@@ -1,11 +1,12 @@
 # gtag-cookie-consent.js
-A tiny script in plain JavaScript that prompts the user for permission to set analytical cookies from GA4.
 
-The approach is GDPR-compliant because no cookies are set by default. The logic is NOT region-specific.
+This is a tiny script in plain JavaScript that prompts the user for permission to set analytical cookies from GA4.
 
-The script sets its own cookie named 'cookie_consent', which expires after 90 days. The allowed values are 'denied' and 'granted', which refer to the user's consent to set analytics cookies. (We assume that GA only sets cookies named like _ga****.)
+The approach is GDPR-compliant because no cookies are set by default. The logic is <b>not</b> region-specific.
 
-If the user rejects GA cookies but they were set before gtag-cookie-consent.js was implemented, the script erases them.
+The script sets its own cookie, 'cookie_consent', which expires after 90 days. The allowed values are 'denied' and 'granted', which refer to the user's consent to set analytics cookies. (We assume that GA only sets cookies named like _ga****.)
+
+If the user rejects GA cookies, but they were set before gtag-cookie-consent.js was implemented, the script erases them.
 
 ## Usage
     <head>
@@ -28,6 +29,9 @@ If the user rejects GA cookies but they were set before gtag-cookie-consent.js w
           width: 80%;
           max-width: 600px;
         }
+        .hidden {
+          display: none;
+        }
       </style>
     </head>
     <body>
@@ -47,6 +51,6 @@ The gtag-cookieconsent script was needed for a [multilingual site](https://do-yo
     </div>
     
   ## Acknowledgement
-  The job of writing the code was done by ChatGPT. I just described the logic and fixed some bugs. 
+  The coding work was done by ChatGPT. I just described what the JS file should do, and then fixed some bugs in the code.
   
-  For example, the condition (consentCookie && consentCookie === 'denied') in checkConsent() function was not considered. That caused the banner to appear on every page of the site if the user initially rejected the cookie.
+  For example, the condition `(consentCookie && consentCookie === 'denied')` was not considered in `checkConsent()` function. That should have caused the banner to appear on every page of the site if the user initially rejected the cookie.
