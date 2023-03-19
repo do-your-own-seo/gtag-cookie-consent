@@ -1,7 +1,7 @@
 # gtag-cookie-consent.js
-A tiny script in plain JavaScript that prompts the user for permission to set analytical cookies from GA4. The logic is NOT region-specific.
+A tiny script in plain JavaScript that prompts the user for permission to set analytical cookies from GA4.
 
-The approach is GDPR-compliant because no cookies are set by default.
+The approach is GDPR-compliant because no cookies are set by default. The logic is NOT region-specific.
 
 The script sets its own cookie named 'cookie_consent', which expires after 90 days. The allowed values are 'denied' and 'granted', which refer to the user's consent to set analytics cookies. (We assume that GA only sets cookies named like _ga****.)
 
